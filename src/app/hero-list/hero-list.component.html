@@ -1,0 +1,23 @@
+<div class= "panel panel-primary">
+    <div class= "panel-heading">
+        <h2>Hero List</h2>
+    </div>
+<div class= "panel-body">
+    <table class= "table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Power</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor= "let hero of heroes | async">
+                <td>{{hero.name}}</td>
+                <td>{{hero.power}}</td>
+                <td><button (click)= "deleteHero(hero.id)" class= "btn btn-danger">Delete Hero</button>
+                    <button (click)= "heroDetails(hero.id)" class="btn btn-info" style="margin-left: 10px">Hero Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,14 @@
+<h2>Hero Details</h2>
+
+<div *ngIf= "hero">
+    <div>
+        <label>Name</label> {{hero.name}}
+    </div>
+    <div>
+        <label>Power</label> {{hero.power}}
+    </div>
+</div>
+
+<br>
+<br>
+<button (click)= "list()" class= "btn btn-primary">Back to Hero List</button><br>
